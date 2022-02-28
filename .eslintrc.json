@@ -1,0 +1,21 @@
+{
+	"env": {
+		"es2021": true,
+		"node": true
+	},
+	"extends": ["eslint:recommended", "prettier"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": ["prettier"],
+	"rules": {
+		"indent": ["off", "tab"],
+		"linebreak-style": ["error", "windows"],
+		"semi": ["error", "always"],
+		"no-async-promise-executor": "off",
+		"no-unused-vars": "off",
+		"no-undef": "off"
+	}
+}

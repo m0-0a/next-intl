@@ -1,0 +1,42 @@
+{
+	"name": "@m0-0a/next-intl",
+	"version": "1.1.1",
+	"description": "Light weight package that brings translations for Next.js project.",
+	"keywords": [
+		"next-intl",
+		"i18n",
+		"internationalization",
+		"next.js",
+		"react"
+	],
+	"author": "Mohammad Ahmad",
+	"license": "MIT",
+	"scripts": {
+		"build": "rollup -c",
+		"dev": "rollup -c -w"
+	},
+	"main": "./dist/index.js",
+	"devDependencies": {
+		"@types/mustache": "^4.1.2",
+		"@typescript-eslint/eslint-plugin": "^4.29.3",
+		"@typescript-eslint/parser": "^4.29.3",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^3.4.1",
+		"prettier": "2.3.2",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"rollup": "^2.57.0",
+		"rollup-plugin-auto-external": "^2.0.0",
+		"rollup-plugin-terser": "^7.0.2",
+		"rollup-plugin-typescript2": "^0.30.0",
+		"typescript": "^4.3.5"
+	},
+	"peerDependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"dependencies": {
+		"mustache": "^4.2.0"
+	}
+}
