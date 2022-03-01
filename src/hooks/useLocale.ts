@@ -11,19 +11,18 @@ const useLocale: UseLocaleType = () => {
 	const [locale, setLocale] = useState<LocaleType>(globalLocale);
 
 	useEffect(() => {
-		localeListeners.add(setLocale);
-		setLocale(globalLocale);
+		const listener = () => setLocale(globalLocale);
+		localeListeners.add(listener);
+		listener();
 		return () => {
-			localeListeners.delete(setLocale);
+			localeListeners.delete(listener);
 		};
 	}, []);
 
 	const handleSetLocale: Dispatch<SetStateAction<LocaleType>> = (newLocaleArg) => {
 		const newLocale = typeof newLocaleArg === 'function' ? newLocaleArg(locale) : newLocaleArg;
 		globalLocale = newLocale as LocaleType;
-		localeListeners.forEach((setter) => {
-			typeof setter === 'function' && setter(newLocale);
-		});
+		localeListeners.forEach((listener) => listener());
 	};
 	return {
 		locale,
