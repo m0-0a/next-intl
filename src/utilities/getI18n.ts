@@ -4,10 +4,10 @@ const getI18n: GetI18nType = () => {
 	try {
 		let userI18n: I18nConfigType;
 		try {
-			userI18n = require('./../../../../i18n').default;
+			userI18n = require('./../../../../i18n');
 		} catch (error) {
 			try {
-				userI18n = require('/i18n').default;
+				userI18n = require('/i18n');
 			} catch (error) {
 				throw new Error(
 					'Missing @m0-0a/next-intl configuration file.\n Please read docs: https://www.npmjs.com/package/@m0-0a/next-intl ',
