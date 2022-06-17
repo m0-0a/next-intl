@@ -12,7 +12,7 @@ You have to create i18n folder in root folder of the project and an index.js fil
 Locales "translations" files should be exported as will as default locale property as following:
 
 ```javascript
-/** i18/index.js **/
+/** i18n/index.js **/
 
 //Load locales files
 const en = require('./en/common.json');
@@ -31,7 +31,7 @@ module.exports = i18n;
 
 **Example of locale files:**
 
-**- i18/en.json**
+**- i18n/en.json**
 
 ```json
 {
@@ -39,7 +39,7 @@ module.exports = i18n;
 }
 ```
 
-**- i18/sv.json**
+**- i18n/sv.json**
 
 ```json
 {
